@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="flex flex-col min-h-screen">
-        
+
         {/* === ここから：全ページ共通のヘッダー === */}
         <header className="bg-blue-600 text-white p-4 shadow-md">
           <div className="container mx-auto">
@@ -37,6 +37,10 @@ export default function RootLayout({
               {/* 演習 4-2 計算の種類をプルダウンで選択可能にする */}
               <a href="/chapter04/ex4-2" className="hover:underline">計算機(プルダウン)</a>
               <a href="/chapter05/button" className="hover:underline">ボタン</a>
+              {/* 演習 5-2 shadcn/uiの利用 */}
+              <a href="/chapter05/calc" className="hover:underline">計算機(shadcn/ui)</a>
+               {/* 演習 5-3 shadcn/uiの利用 */}
+              <a href="/chapter05/survey" className="hover:underline">選択コンポーネント</a>
             </nav>
           </div>
         </header>
