@@ -16,10 +16,11 @@ export const authOptions: NextAuthOptions = {
       },
 
       // 認証ロジックの実装
+      // RESTAPIに対して承認リクエストを発行する
       async authorize(credentials) {
         try{
           // バックエンドAPIへ認証リクエストを送信
-          const res = await fetch("http://74.226.194.15/api/auth/login", {
+          const res = await fetch("http://20.78.35.126/api/auth/login", {
             method: "POST",
             // APIの仕様に合わせる
             body: JSON.stringify({
@@ -50,6 +51,7 @@ export const authOptions: NextAuthOptions = {
   /**
    * 演習 7-3 取得したJWTをアプリケーション全体で利用可能にする
    */
+  // NextAuthに実行してほしいコールバック関数
   callbacks: {
     // トークンの保存処理 (authorizeの戻り値をJWTに書き込む)
     async jwt({ token, user }) {
