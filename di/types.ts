@@ -6,5 +6,14 @@ export const TYPES = {
    // インフラストラクチャ層
    IProductRepository: Symbol.for("IProductRepository"),
    // サービス(ユースケース)層
-   ISearchProductService: Symbol.for("ISearchProductService")
+   ISearchProductService: Symbol.for("ISearchProductService"),
+    /**
+     * 演習 8-4 Serviceの実装とDIコンテナへの登録
+     */
+    IUserRepository: Symbol.for("IUserRepository"),
+    IRegisterUserService: Symbol.for("IRegisterUserService"),
+        /**
+     * 演習 8-9 リポジトリの実装を作成する
+     */
+    IProductCategoryRepository: Symbol.for("IProductCategoryRepository") 
 };
